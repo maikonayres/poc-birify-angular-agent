@@ -1,0 +1,118 @@
+@use '../../../../../assets/layout/mixins' as *;
+
+:host(.layout-root-menuitem) > .layout-menuitem-root-text {
+  font-size: 0.857rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0.75rem 0;
+}
+
+:host(.layout-root-menuitem) > a {
+  display: none;
+}
+
+:host a {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+  outline: 0 none;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  border-radius: var(--content-border-radius);
+  transition: box-shadow var(--element-transition-duration);
+}
+
+:host a .layout-menuitem-icon {
+  margin-right: 0.5rem;
+}
+
+:host a .layout-submenu-toggler {
+  font-size: 75%;
+  margin-left: auto;
+  transition: transform var(--element-transition-duration);
+}
+
+:host a.active-route {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+:host a:hover {
+  background-color: var(--surface-hover);
+}
+
+:host a:focus {
+  @include focused-inset();
+}
+
+:host(.active-menuitem) > a .layout-submenu-toggler {
+  transform: rotate(-180deg);
+}
+
+:host > ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+:host > ul > li > a {
+  margin-left: 1rem;
+}
+
+:host > ul > li > ul {
+  overflow: hidden;
+  border-radius: var(--content-border-radius);
+}
+
+:host > ul > li > ul > li > a {
+  margin-left: 2rem;
+}
+
+:host > ul > li > ul > li > ul > li > a {
+  margin-left: 2.5rem;
+}
+
+:host > ul > li > ul > li > ul > li > ul > li > a {
+  margin-left: 3rem;
+}
+
+:host > ul > li > ul > li > ul > li > ul > li > ul > li > a {
+  margin-left: 3.5rem;
+}
+
+:host > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > a {
+  margin-left: 4rem;
+}
+
+.p-submenu-enter {
+  animation: p-animate-submenu-expand 450ms cubic-bezier(0.86, 0, 0.07, 1) forwards;
+}
+
+.p-submenu-leave {
+  animation: p-animate-submenu-collapse 450ms cubic-bezier(0.86, 0, 0.07, 1) forwards;
+}
+
+@keyframes p-animate-submenu-expand {
+  from {
+    max-height: 0;
+    overflow: hidden;
+  }
+  to {
+    max-height: 1000px;
+    overflow: visible;
+  }
+}
+
+@keyframes p-animate-submenu-collapse {
+  from {
+    max-height: 1000px;
+    overflow: hidden;
+  }
+  to {
+    max-height: 0;
+    overflow: hidden;
+  }
+}

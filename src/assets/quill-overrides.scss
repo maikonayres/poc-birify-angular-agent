@@ -1,0 +1,92 @@
+.p-editor .ql-editor {
+  p.ql-align-center img,
+  h1.ql-align-center img,
+  h2.ql-align-center img,
+  h3.ql-align-center img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  p.ql-align-right img,
+  h1.ql-align-right img,
+  h2.ql-align-right img,
+  h3.ql-align-right img {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  p.ql-align-left img,
+  h1.ql-align-left img,
+  h2.ql-align-left img,
+  h3.ql-align-left img {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+.ql-container .ql-editor pre.ql-syntax,
+.ql-container .ql-editor pre[data-language],
+.ql-container .ql-editor pre {
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace !important;
+  font-size: 0.875rem !important;
+  line-height: 1.6 !important;
+  background-color: #0f172a !important;
+  color: #e2e8f0 !important;
+  border-radius: 0.5rem !important;
+  border: 1px solid #334155 !important;
+  padding: 0.875rem 1rem !important;
+  overflow-x: auto;
+  white-space: pre !important;
+}
+
+.ql-container .ql-editor .ql-code-block-container {
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace !important;
+  font-size: 0.875rem !important;
+  line-height: 1.6 !important;
+  background-color: #0f172a !important;
+  color: #e2e8f0 !important;
+  border-radius: 0.5rem !important;
+  border: 1px solid #334155 !important;
+  padding: 0.875rem 1rem !important;
+  overflow-x: auto;
+}
+
+.ql-container .ql-editor .ql-code-block {
+  white-space: pre !important;
+}
+
+.p-editor .ql-editor {
+  code {
+    font-family:
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+      monospace;
+    font-size: 0.9em;
+    background-color: rgba(148, 163, 184, 0.2);
+    color: inherit;
+    padding: 0.125rem 0.35rem;
+    border-radius: 0.25rem;
+  }
+
+  pre.ql-syntax,
+  pre[data-language],
+  pre {
+    font-family:
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+      monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 0.875rem 1rem;
+    overflow-x: auto;
+    white-space: pre;
+  }
+}

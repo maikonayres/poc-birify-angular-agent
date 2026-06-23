@@ -1,0 +1,44 @@
+@use '../../../../../assets/layout/mixins' as *;
+
+:host {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+}
+
+.language-selector-trigger__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  width: calc(2.5rem - 2px);
+  height: calc(2.5rem - 2px);
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  line-height: 0;
+  background: transparent;
+  transition: background-color var(--element-transition-duration);
+
+  &:hover {
+    background-color: var(--surface-hover);
+  }
+
+  &:focus-visible {
+    @include focused();
+  }
+}
+
+.language-selector-trigger__flag {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}

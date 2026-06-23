@@ -1,0 +1,19 @@
+<button
+  type="button"
+  class="language-selector-trigger__button"
+  [attr.aria-label]="selectLanguageLabel()"
+  [attr.aria-expanded]="isOpen()"
+  aria-haspopup="true"
+  (click)="toggle($event)"
+>
+  <img
+    class="language-selector-trigger__flag"
+    [src]="currentLanguage().flagTriggerSrc"
+    [alt]="currentLanguage().flagAlt"
+    [style.object-position]="currentLanguage().flagObjectPosition"
+  />
+</button>
+
+@if (isOpen()) {
+  <app-language-selector-panel (languageSelected)="onLanguageSelected($event)" />
+}

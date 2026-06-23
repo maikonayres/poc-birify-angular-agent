@@ -1,0 +1,40 @@
+@use '../../../../../assets/layout/mixins' as *;
+
+:host {
+  display: inline-flex;
+  align-items: center;
+}
+
+.topbar-icon-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  padding: 0;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--text-color);
+  transition: background-color var(--element-transition-duration);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--surface-hover);
+  }
+
+  &:focus-visible {
+    @include focused();
+  }
+
+  i {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  &--highlight {
+    background-color: var(--primary-color);
+    color: var(--primary-contrast-color);
+  }
+}

@@ -1,0 +1,12 @@
+.sidebar-footer {
+  flex-shrink: 0;
+  padding-top: 0.75rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid var(--surface-border);
+  text-align: center;
+}
+
+.sidebar-footer__text {
+  font-size: 0.75rem;
+  color: var(--text-color-secondary);
+}

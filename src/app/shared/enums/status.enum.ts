@@ -1,0 +1,7 @@
+export enum StatusEnum {
+  PENDING = 'PENDING',
+  APPROVED = 'APPROVED',
+  REJECTED = 'REJECTED',
+  IN_REVIEW = 'IN_REVIEW',
+  NOT_SENT = 'NOT_SENT',
+}

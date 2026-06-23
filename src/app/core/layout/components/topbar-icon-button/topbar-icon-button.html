@@ -1,0 +1,10 @@
+<button
+  type="button"
+  class="topbar-icon-button"
+  [class.topbar-icon-button--highlight]="highlight()"
+  [attr.aria-expanded]="ariaExpanded()"
+  [attr.aria-haspopup]="ariaHasPopup()"
+  (click)="onClick($event)"
+>
+  <i [class]="iconClass()"></i>
+</button>

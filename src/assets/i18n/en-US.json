@@ -1,0 +1,152 @@
+{
+  "actions": {
+    "add": "Add",
+    "cancel": "Cancel",
+    "chooseFromGallery": "Choose from gallery",
+    "open": "Open",
+    "remove": "Remove",
+    "retry": "Retry",
+    "send": "Send",
+    "takePhoto": "Take photo",
+    "view": "View",
+    "viewDetails": "View details"
+  },
+  "audit": {
+    "images": {
+      "description": "Audit images page created successfully.",
+      "title": "Image Request"
+    }
+  },
+  "auth": {
+    "errors": {
+      "invalidCredentials": "Invalid email or password. Please check and try again."
+    },
+    "login": {
+      "forgotPassword": "I forgot my password",
+      "rememberMe": "Remember me",
+      "subtitle": "Sign in with your credentials to continue on the platform.",
+      "title": "Access your account"
+    }
+  },
+  "errors": {
+    "cameraDenied": "Camera permission denied.",
+    "connection": "Could not connect. Check your internet connection.",
+    "fileTooLarge": "File too large.",
+    "generic": "Something went wrong. Please try again.",
+    "noFile": "No file selected.",
+    "photosDenied": "Photos access denied."
+  },
+  "fields": {
+    "email": {
+      "label": "Email",
+      "placeholder": "Enter your email"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Enter your password"
+    }
+  },
+  "filters": {
+    "all": "All"
+  },
+  "formValidators": {
+    "maxlength": "{{field}} must contain at most {{maxlength}} characters.",
+    "minlength": "{{field}} must contain at least {{minlength}} characters.",
+    "pattern": "{{field}} is invalid.",
+    "required": "{{field}} is required."
+  },
+  "global": {
+    "file": "File",
+    "image": "Image",
+    "login": "Sign in",
+    "logout": "Sign out",
+    "selectLanguage": "Select language",
+    "version": "Version",
+    "of": "of",
+    "progress": "Progress",
+    "register": "Register",
+    "welcome": "Welcome"
+  },
+  "languages": {
+    "en-US": "English",
+    "pt-BR": "Portuguese"
+  },
+  "notFound": {
+    "backHome": "Back to home",
+    "code": "404",
+    "goBack": "Go back",
+    "subtitle": "The address you visited does not exist or has been moved.",
+    "title": "Page not found"
+  },
+  "pokedex": {
+    "hero": {
+      "subtitle": "Browse the tenant Pokedex entries.",
+      "title": "Pokedex"
+    },
+    "table": {
+      "columns": {
+        "dexNumber": "#",
+        "heightDm": "Height (dm)",
+        "name": "Name",
+        "typePrimary": "Type 1",
+        "typeSecondary": "Type 2",
+        "weightHg": "Weight (hg)"
+      },
+      "empty": "No Pokémon found."
+    }
+  },
+  "nav": {
+    "documents": {
+      "aria": "Manage documents",
+      "breadcrumb": "Documents",
+      "label": "Documents",
+      "tab": "Docs"
+    },
+    "home": {
+      "aria": "Go to home",
+      "breadcrumb": "Home",
+      "label": "Home",
+      "tab": "Home"
+    },
+    "menu": {
+      "aria": "Open menu",
+      "breadcrumb": "Menu",
+      "label": "Menu",
+      "tab": "Menu"
+    },
+    "notifications": {
+      "aria": "View notifications",
+      "breadcrumb": "Notifications",
+      "label": "Notifications",
+      "tab": "Alerts"
+    },
+    "sidebar": {
+      "auditGroup": "Audit",
+      "auditImages": "Image requests",
+      "dashboard": "Dashboard",
+      "homeGroup": "Home",
+      "pokedexGroup": "Pokedex",
+      "pokedexList": "List",
+      "teste": "Test"
+    }
+  },
+  "status": {
+    "approved": "Approved",
+    "inReview": "Under review",
+    "pending": "Pending",
+    "rejected": "Rejected"
+  },
+  "ui": {
+    "addRequestedPhotosToContinue": "Add the requested photos below.",
+    "appLockDialogAria": "App unlock",
+    "appLockHint": "Use Face ID, Touch ID, or your device passcode to continue.",
+    "appLockTitle": "App locked",
+    "biometricPromptReason": "Unlock the app to continue",
+    "openCamera": "Open camera to take a photo",
+    "openGallery": "Open gallery to choose an image",
+    "openMediaOptions": "Open media options",
+    "pdfOpenExternal": "Open in another window",
+    "pdfPreviewTitle": "PDF preview",
+    "selectSource": "Select source"
+  }
+}

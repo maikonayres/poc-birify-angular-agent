@@ -1,0 +1,13 @@
+import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { GlobalLoaderComponent } from './core/loading/components/global-loader/global-loader.component';
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet, GlobalLoaderComponent],
+  templateUrl: './app.html',
+  styleUrl: './app.css',
+})
+export class App {
+  protected readonly title = signal('angular-birify-agent');
+}

@@ -1,0 +1,8 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+:host ::ng-deep .inline-alert {
+  width: 100%;
+}

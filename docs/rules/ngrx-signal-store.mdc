@@ -1,0 +1,52 @@
+---
+description: Padrao de organizacao do NgRx Signal Store
+globs: "**/*.store.ts"
+alwaysApply: false
+---
+
+# NgRx Signal Store
+
+Cada store deve ser organizado em arquivos separados dentro de `presentation/store/`:
+
+```
+store/
+  models/<nome>-store.model.ts   -- Interface do estado
+  <nome>.slice.ts                -- Estado inicial tipado
+  <nome>.updaters.ts             -- Funcoes PartialStateUpdater puras
+  <nome>.store.ts                -- Composicao com signalStore()
+```
+
+## Exemplo
+
+```typescript
+// models/auth-store.model.ts
+export interface AuthStoreModel {
+  session: AuthSessionEntity | null;
+  loading: boolean;
+}
+
+// auth.slice.ts
+export const authSlice: AuthStoreModel = {
+  session: null,
+  loading: false,
+};
+
+// auth.updaters.ts
+export function setLoading(value: boolean): PartialStateUpdater<AuthStoreModel> {
+  return () => ({ loading: value });
+}
+
+// auth.store.ts
+export const AuthStore = signalStore(
+  { providedIn: 'root' },
+  withState(authSlice),
+  withComputed((store) => ({ ... })),
+  withMethods((store) => ({ ... })),
+);
+```
+
+## Regras
+
+- Updaters sao funcoes puras (sem side effects)
+- Stores usam `providedIn: 'root'` (singleton, tree-shakable)
+- Componentes NAO acessam o store diretamente -- usam Facades ou Adapters

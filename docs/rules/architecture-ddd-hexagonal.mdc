@@ -1,0 +1,62 @@
+---
+description: Arquitetura DDD + Hexagonal (Ports & Adapters) do projeto Angular
+alwaysApply: true
+---
+
+# Arquitetura DDD + Hexagonal
+
+Este projeto segue Domain-Driven Design com Ports & Adapters (Arquitetura Hexagonal).
+
+## Estrutura de uma Feature
+
+Toda feature deve seguir esta organizacao de camadas:
+
+```
+features/<nome>/
+  domain/
+    entity/           -- Entidades de dominio (classes imutaveis com readonly)
+    ports/            -- Contratos abstratos (abstract class) para inversao de dependencia
+    repositories/     -- Contratos abstratos de acesso a dados
+  application/
+    use-cases/        -- Orquestracao de logica de negocio (1 classe = 1 caso de uso)
+  infrastructure/
+    api/
+      repositories/   -- Implementacao concreta dos repositories (ex: REST)
+      dtos/           -- Objetos de transferencia de dados da API
+      mappers/        -- Conversao DTO -> Entity
+      persistence/    -- Persistencia local (localStorage, SQLite, etc.)
+  presentation/
+    adapters/         -- Implementacao concreta dos ports (Adapters)
+    pages/            -- Componentes de pagina (smart components, rotas)
+    components/       -- Componentes de UI (dumb/presentational)
+    facades/          -- Ponto de entrada da UI para os use cases
+    store/            -- NgRx Signal Store (slice, updaters, model)
+    view-models/      -- Interfaces de view model
+    services/         -- Servicos especificos da presentation (ex: i18n VM)
+```
+
+## Direcao de Dependencias (NUNCA violar)
+
+- `domain/` NAO importa de nenhuma outra camada
+- `application/` importa apenas de `domain/`
+- `infrastructure/` importa apenas de `domain/`
+- `presentation/` pode importar de `application/` e `domain/`
+- `core/` NUNCA importa de `features/` (usa Ports)
+
+## Ports & Adapters
+
+- **Port** = abstract class no `domain/ports/` ou `core/ports/`
+- **Adapter** = implementacao concreta no `presentation/adapters/` ou `infrastructure/`
+- Usar `abstract class` (nao `interface`) para servir como token de DI do Angular
+
+## Nomenclatura
+
+- Entidades: `NomeEntity` (ex: `AuthSessionEntity`)
+- Ports: `NomePort` (ex: `AuthSessionPort`, `SessionPort`)
+- Adapters: `NomeAdapter` (ex: `AuthSessionAdapter`)
+- Repositories: `PrefixoNomeRepository` (ex: `RestAuthRepository`)
+- Use Cases: `NomeUseCase` com metodo `execute()` (ex: `LoginUseCase`)
+- Facades: `NomeFacade` (ex: `AuthFacade`)
+- DTOs: `NomeDto` (ex: `LoginRequestDto`)
+- Mappers: `NomeMapper` (ex: `AuthMapper`)
+- Pages: `NomePage` com sufixo `.page.ts` (ex: `LoginPage`)

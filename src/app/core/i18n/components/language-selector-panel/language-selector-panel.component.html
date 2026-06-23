@@ -1,0 +1,19 @@
+@for (language of languages(); track language.locale) {
+  <button
+    type="button"
+    class="language-selector-panel__item"
+    [class.language-selector-panel__item--active]="language.locale === currentLocale()"
+    (click)="selectLanguage(language.locale)"
+  >
+    <img
+      [alt]="language.flagAlt"
+      [src]="language.flagSrc"
+      class="language-selector-panel__flag"
+      [style.object-position]="language.flagObjectPosition"
+    />
+    <span>{{ language.label }}</span>
+    @if (language.locale === currentLocale()) {
+      <i class="pi pi-check language-selector-panel__check"></i>
+    }
+  </button>
+}

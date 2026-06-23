@@ -1,0 +1,11 @@
+<app-topbar-icon-button
+  iconClass="pi pi-palette"
+  [highlight]="true"
+  [ariaExpanded]="isOpen()"
+  [ariaHasPopup]="true"
+  (clicked)="toggle($event)"
+/>
+
+@if (isOpen()) {
+  <app-appearance-configurator [showMenuMode]="showMenuMode()" />
+}

@@ -1,0 +1,41 @@
+<div class="card pokedex-list-table">
+  <p-table
+    [value]="items()"
+    [lazy]="true"
+    [paginator]="true"
+    [rows]="pageLimit"
+    [rowsPerPageOptions]="[pageLimit]"
+    [totalRecords]="facade.totalRecords()"
+    [loading]="facade.loading()"
+    [first]="facade.pageIndex() * pageLimit"
+    (onLazyLoad)="onPageChange($event)"
+    dataKey="dexNumber"
+    styleClass="p-datatable-striped"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th>{{ vm().columns.dexNumber }}</th>
+        <th>{{ vm().columns.name }}</th>
+        <th>{{ vm().columns.typePrimary }}</th>
+        <th>{{ vm().columns.typeSecondary }}</th>
+        <th>{{ vm().columns.heightDm }}</th>
+        <th>{{ vm().columns.weightHg }}</th>
+      </tr>
+    </ng-template>
+    <ng-template let-pokemon pTemplate="body">
+      <tr>
+        <td>{{ pokemon.dexNumber }}</td>
+        <td>{{ pokemon.name }}</td>
+        <td>{{ pokemon.typePrimary }}</td>
+        <td>{{ formatTypeSecondary(pokemon.typeSecondary) }}</td>
+        <td>{{ pokemon.heightDm }}</td>
+        <td>{{ pokemon.weightHg }}</td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="6">{{ vm().empty }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

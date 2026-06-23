@@ -1,0 +1,152 @@
+{
+  "actions": {
+    "add": "Adicionar",
+    "cancel": "Cancelar",
+    "chooseFromGallery": "Escolher da galeria",
+    "open": "Abrir",
+    "remove": "Remover",
+    "retry": "Tentar novamente",
+    "send": "Enviar",
+    "takePhoto": "Tirar foto",
+    "view": "Ver",
+    "viewDetails": "Ver detalhes"
+  },
+  "audit": {
+    "images": {
+      "description": "Página de auditoria de imagens criada com sucesso.",
+      "title": "Solicitação de Imagens"
+    }
+  },
+  "auth": {
+    "errors": {
+      "invalidCredentials": "E-mail ou senha inválidos. Verifique e tente novamente."
+    },
+    "login": {
+      "forgotPassword": "Esqueci minha senha",
+      "rememberMe": "Lembrar acesso",
+      "subtitle": "Entre com suas credenciais para continuar na plataforma.",
+      "title": "Acesse sua conta"
+    }
+  },
+  "errors": {
+    "cameraDenied": "Permissão de câmera negada.",
+    "connection": "Não foi possível conectar. Verifique sua internet.",
+    "fileTooLarge": "Arquivo muito grande.",
+    "generic": "Algo deu errado. Tente novamente.",
+    "noFile": "Nenhum arquivo selecionado.",
+    "photosDenied": "Permissão de acesso às fotos negada."
+  },
+  "fields": {
+    "email": {
+      "label": "E-mail",
+      "placeholder": "Digite seu e-mail"
+    },
+    "password": {
+      "label": "Senha",
+      "placeholder": "Digite sua senha"
+    }
+  },
+  "filters": {
+    "all": "Todos"
+  },
+  "formValidators": {
+    "maxlength": "{{field}} deve conter no máximo {{maxlength}} caracteres.",
+    "minlength": "{{field}} deve conter no mínimo {{minlength}} caracteres.",
+    "pattern": "{{field}} inválido.",
+    "required": "{{field}} obrigatória."
+  },
+  "global": {
+    "file": "Arquivo",
+    "image": "Imagem",
+    "login": "Entrar",
+    "logout": "Sair",
+    "selectLanguage": "Selecionar idioma",
+    "version": "Versão",
+    "of": "de",
+    "progress": "Progresso",
+    "register": "Registrar",
+    "welcome": "Bem vindo"
+  },
+  "languages": {
+    "en-US": "Inglês",
+    "pt-BR": "Português"
+  },
+  "notFound": {
+    "backHome": "Voltar ao início",
+    "code": "404",
+    "goBack": "Voltar",
+    "subtitle": "O endereço que você acessou não existe ou foi movido.",
+    "title": "Página não encontrada"
+  },
+  "pokedex": {
+    "hero": {
+      "subtitle": "Consulte as entradas da Pokedex do tenant.",
+      "title": "Pokedex"
+    },
+    "table": {
+      "columns": {
+        "dexNumber": "#",
+        "heightDm": "Altura (dm)",
+        "name": "Nome",
+        "typePrimary": "Tipo 1",
+        "typeSecondary": "Tipo 2",
+        "weightHg": "Peso (hg)"
+      },
+      "empty": "Nenhum Pokémon encontrado."
+    }
+  },
+  "nav": {
+    "documents": {
+      "aria": "Gerenciar documentos",
+      "breadcrumb": "Documentos",
+      "label": "Documentos",
+      "tab": "Docs"
+    },
+    "home": {
+      "aria": "Ir para a página inicial",
+      "breadcrumb": "Início",
+      "label": "Início",
+      "tab": "Home"
+    },
+    "menu": {
+      "aria": "Abrir menu",
+      "breadcrumb": "Menu",
+      "label": "Menu",
+      "tab": "Menu"
+    },
+    "notifications": {
+      "aria": "Ver notificações",
+      "breadcrumb": "Notificações",
+      "label": "Notificações",
+      "tab": "Alerts"
+    },
+    "sidebar": {
+      "auditGroup": "Auditoria",
+      "auditImages": "Solicitação imagens",
+      "dashboard": "Dashboard",
+      "homeGroup": "Home",
+      "pokedexGroup": "Pokedex",
+      "pokedexList": "Lista",
+      "teste": "Teste"
+    }
+  },
+  "status": {
+    "approved": "Aprovado",
+    "inReview": "Em análise",
+    "pending": "Pendente",
+    "rejected": "Rejeitado"
+  },
+  "ui": {
+    "addRequestedPhotosToContinue": "Adicione as fotos solicitadas abaixo.",
+    "appLockDialogAria": "Desbloqueio do aplicativo",
+    "appLockHint": "Use Face ID, Touch ID ou o código do aparelho para continuar.",
+    "appLockTitle": "App bloqueado",
+    "biometricPromptReason": "Desbloqueie o app para continuar",
+    "openCamera": "Abrir câmera para tirar foto",
+    "openGallery": "Abrir galeria para escolher imagem",
+    "openMediaOptions": "Abrir opções de mídia",
+    "pdfOpenExternal": "Abrir em outra janela",
+    "pdfPreviewTitle": "Pré-visualização do PDF",
+    "selectSource": "Selecione a origem"
+  }
+}
